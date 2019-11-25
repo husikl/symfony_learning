@@ -1,0 +1,15 @@
+easy_admin:
+    entities:
+      Article:
+        class: App\Entity\Articles
+        content:
+          title: '%%entity_label%% listing'
+          max_results: 1
+##      Category:
+#        list:
+#          max_results : 1
+#        # List the entity class name you want to manage
+#        - App\Entity\Product
+#        - App\Entity\Category
+#        - App\Entity\User
+

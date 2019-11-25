@@ -78,6 +78,19 @@
     "doctrine/reflection": {
         "version": "v1.0.0"
     },
+    "easycorp/easyadmin-bundle": {
+        "version": "2.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "2.0",
+            "ref": "0a51040a43c6f2172a3a0135cd15daf2043905d7"
+        },
+        "files": [
+            "config/packages/easy_admin.yaml",
+            "config/routes/easy_admin.yaml"
+        ]
+    },
     "egulias/email-validator": {
         "version": "2.1.11"
     },
@@ -99,6 +112,12 @@
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
+    "knplabs/knp-components": {
+        "version": "v2.2.0"
+    },
+    "knplabs/knp-paginator-bundle": {
+        "version": "v4.0.0"
+    },
     "monolog/monolog": {
         "version": "1.24.0"
     },
@@ -110,6 +129,9 @@
     },
     "ocramius/proxy-manager": {
         "version": "2.1.1"
+    },
+    "pagerfanta/pagerfanta": {
+        "version": "v2.1.3"
     },
     "psr/cache": {
         "version": "1.0.1"
@@ -186,6 +208,9 @@
     },
     "symfony/event-dispatcher-contracts": {
         "version": "v1.1.5"
+    },
+    "symfony/expression-language": {
+        "version": "v4.3.5"
     },
     "symfony/filesystem": {
         "version": "v4.3.4"
@@ -418,6 +443,9 @@
             "config/packages/test/validator.yaml",
             "config/packages/validator.yaml"
         ]
+    },
+    "symfony/var-dumper": {
+        "version": "v4.3.6"
     },
     "symfony/var-exporter": {
         "version": "v4.3.4"

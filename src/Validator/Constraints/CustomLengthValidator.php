@@ -6,12 +6,12 @@ use Symfony\Component\Validator\ConstraintValidator;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;
 use Symfony\Component\Validator\Exception\UnexpectedValueException;
 
-class CustomLenghtConstraintValidator extends ConstraintValidator
+class CustomLengthValidator extends ConstraintValidator
 {
     public function validate($value, Constraint $constraint)
     {
-        if (!$constraint instanceof CustomLengthConstraint) {
-            throw new UnexpectedTypeException($constraint, CustomLengthConstraint::class);
+        if (!$constraint instanceof CustomLength) {
+            throw new UnexpectedTypeException($constraint, CustomLength::class);
         }
 
         // custom constraints should ignore null and empty values to allow
@@ -28,7 +28,7 @@ class CustomLenghtConstraintValidator extends ConstraintValidator
             // throw new UnexpectedValueException($value, 'string|int');
         }
 
-        if (!preg_match(strlen($value)<=2 && strlen($value)>=7)) {
+        if (strlen($value)<3 || strlen($value)>7) {
             $this->context->buildViolation($constraint->message)
                 ->setParameter('{{ string }}', $value)
                 ->addViolation();
